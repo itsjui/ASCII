@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MShop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="imagens/png" href="public/imagens/icon2.png">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+  <div class="logo">
+    <span class="blue">Modern</span><span class="gray">Shop</span>
+  </div>
+
+  <nav class="nav-links">
+    <a href="#" class="active">Novidades</a>
+    <a href="#">Produtos</a>
+    <a href="#">Categorias</a>
+    <a href="#">Sobre</a>
+  </nav>
+
+  <div class="icons">
+    <!-- Search toggle -->
+    <div class="search-container">
+      <img src="public/imagens/search.png" alt="Buscar" class="icon search-icon">
+    </div>
+
+    <!-- Outros ícones -->
+    <img src="public/imagens/user.png" alt="Usuário" class="icon">
+    <div class="cart">
+      <img src="public/imagens/shopping-bag.png" alt="Carrinho" class="icon">
+    </div>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>
+        Nova Coleção <br>
+        <span class="highlight-blue">BASIC</span>
+        <span class="highlight-brown">STREET</span>
+      </h1>
+
+      <p>
+        Descubra as últimas tendências em tecnologia e lifestyle.<br>
+        Produtos cuidadosamente selecionados para você.
+      </p>
+
+      <div class="buttons">
+        <button class="btn-primary">Explorar Coleção →</button>
+        <button class="btn-secondary">Ver Ofertas</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products">
+    <h3>Produtos em Alta🔥</h3>
+    <div class="container">
+      <div class="card">
+        <img src="public/imagens/product-1.jpg" alt="Produto 1">
+        <h3>Produto 1</h3>
+        <p>Descrição breve do produto 1.</p>
+        <span class="price">R$ 99,90</span>
+        <button class="btn-primary"> Adicionar ao carrinho</button>
+      </div>
+
+      <div class="card">
+        <img src="public/imagens/product-2.jpg" alt="Produto 2">
+        <h3>Produto 2</h3>
+        <p>Descrição breve do produto 2.</p>
+        <span class="price">R$ 149,90</span>
+        <button class="btn-primary"> Adicionar ao carrinho</button>
+      </div>
+
+      <div class="card">
+        <img src="public/imagens/product-3.jpg" alt="Produto 3">
+        <h3>Produto 3</h3>
+        <p>Descrição breve do produto 3.</p>
+        <span class="price">R$ 79,90</span>
+        <button class="btn-primary"> Adicionar ao carrinho</button>
+      </div>
+
+      <div class="card">
+        <img src="public/imagens/product-4.jpg" alt="Produto 4">
+        <h3>Produto 4</h3>
+        <p>Descrição breve do produto 4.</p>
+        <span class="price">R$ 1999,90</span>
+        <button class="btn-primary"> Adicionar ao carrinho</button>
+      </div>
+
+      <div class="card">
+        <img src="public/imagens/product-5.jpg" alt="Produto 5">
+        <h3>Produto 5</h3>
+        <p>Descrição breve do produto 5.</p>
+        <span class="price">R$ 29,90</span>
+        <button class="btn-primary"> Adicionar ao carrinho</button>
+      </div>
+
+      <div class="card">
+        <img src="public/imagens/product-6.jpg" alt="Produto 6">
+        <h3>Produto 6</h3>
+        <p>Descrição breve do produto 6.</p>
+        <span class="price">R$ 49,90</span>
+        <button class="btn-primary"> Adicionar ao carrinho</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h2 class="logo"><span>Modern</span>Shop</h2>
+        <p>Sua loja online de produtos premium e tecnologia de ponta.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Comprar</h4>
+        <ul>
+          <li><a href="#">Novidades</a></li>
+          <li><a href="#">Mais Vendidos</a></li>
+          <li><a href="#">Ofertas</a></li>
+          <li><a href="#">Categorias</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ajuda</h4>
+        <ul>
+          <li><a href="#">Atendimento</a></li>
+          <li><a href="#">Rastreio de Pedido</a></li>
+          <li><a href="#">Devoluções</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Sobre</h4>
+        <ul>
+          <li><a href="#">Nossa História</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+ 
+  <script>
+    // Adiciona descontos dinamicamente nos produtos 2 e 5
+    document.querySelectorAll(".card").forEach((card, i) => {
+      if (i === 1) card.dataset.desconto = "-25%";
+      if (i === 4) card.dataset.desconto = "-10%";
+    });
+  </script>
+
+  <script>
+    // Animação dos cards dos produtos
+    const cards = document.querySelectorAll(".products .card");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cards.forEach((card) => observer.observe(card));
+  </script>
+
+</body>
+</html>
