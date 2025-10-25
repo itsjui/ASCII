@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ===== Navbar ===== */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -100,16 +100,16 @@ body {
   position: relative;
 }
 
-/* === HERO BANNER === */
+/* Banner*/
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh; /* ocupa a tela inteira */
+  height: 100vh; 
   
   /* Gradiente + imagem */
   background-image: 
     linear-gradient(to right, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.6) 40%, rgba(255,255,255,0) 100%),
-    url("/public/imagens/bannerTenis.jpg"); /* <-- substitua pelo nome do seu arquivo */
+    url("./public/imagens/bannerTenis.jpg");
   
   background-size: 70%;
   background-position: right center;
@@ -120,7 +120,7 @@ body {
   cursor: pointer;
 }
 
-/* === CONTEÚDO === */
+/* Conteudo */
 .hero-content {
   max-width: 500px;
   z-index: 2;
@@ -208,16 +208,16 @@ body {
 }
 
 
-/* ==== SEÇÃO DE PRODUTOS ==== */
+/* SEÇÃO DE PRODUTOS */
 section.products {
   background: #f9f9f9;
   padding: 80px 20px;
 }
 .products h3 {
   text-align: center;
-  font-size: 2rem;       /* aumenta o tamanho */
-  margin-bottom: 2rem;   /* dá espaço abaixo do título */
-  color: #333;           /* opcional, melhora o contraste */
+  font-size: 2rem;      
+  margin-bottom: 2rem;   
+  color: #333;          
 }
 
 
@@ -274,14 +274,13 @@ section.products {
   color: #111;
   margin-bottom: 15px;
 }
-/* 🔹 Efeito de entrada nos cards */
 .products .card {
   opacity: 0;
   transform: translateX(-50px);
   animation: cardSlideIn 0.8s ease forwards;
 }
 
-/* 🔹 Animação em sequência — cada card entra com um pequeno atraso */
+/* Animações */
 .products .card.visible {
   opacity: 1;
   transform: translateX(0);
@@ -308,6 +307,7 @@ section.products {
   padding: 6px 10px;
   border-radius: 5px;
 }
+/* FOOTER */
 .footer {
   background: #f8f9fb;
   padding: 40px 8%;
@@ -393,7 +393,7 @@ section.products {
   font-size: 0.9rem;
 }
 
-/* === RESPONSIVO === */
+/* Responsividade */
 @media (max-width: 850px) {
   .nav-links {
     position: absolute;
